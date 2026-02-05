@@ -75,7 +75,7 @@ Aqui está o código Markdown prontinho para você copiar e colar onde precisar.
 
 
 Calcule o valor total da obra e exiba o relatório. 
-- 1. Subtotal por item (Conforme tabela) 
-- 2. Total da obra (Sem mão de obra) 
-- 3. Total da obra (Com mão de obra) 
-- 4. O lucro da empresa é de 25% sobre o total da obra, calcule quanto a  empresa receberá ao final e quanto ela deverá destinar ao custo da  obra considerando o desconto da folha de pagamento.
+- I. Subtotal por item (Conforme tabela) 
+- II. Total da obra (Sem mão de obra) 
+- III. Total da obra (Com mão de obra) 
+- IV. O lucro da empresa é de 25% sobre o total da obra, calcule quanto a  empresa receberá ao final e quanto ela deverá destinar ao custo da  obra considerando o desconto da folha de pagamento.
