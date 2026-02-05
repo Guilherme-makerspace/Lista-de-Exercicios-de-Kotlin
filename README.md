@@ -107,15 +107,19 @@ fun main() {
     var banheiro = 0
     
     while(true){
-        println("Escreva as adições dos comodos em minusculo sem acento e escreva *pare* para finalizar")
+        println("Escreva primeiro as adições dos comodos. Digite *pare* para finalizar")
         var adicoes = readln()
+        if(adicoes == "pare"){
+            break
+        }
+        println("Digite a quantidade agora")
+        var quantidade = readln().toInt()
         when(adicoes){
-            "Quarto Com Suite" -> comSuite++
-            "Quarto Sem Suite" -> semSuite++
-            "Banheiro" -> banheiro++
-            "Piscina" -> piscina++
-            "Area De Serviço" -> areaServico++
-            "pare" -> break
+            "Quarto Com Suite" -> comSuite += quantidade
+            "Quarto Sem Suite" -> semSuite += quantidade
+            "Banheiro" -> banheiro += quantidade
+            "Piscina" -> piscina += quantidade
+            "Area De Serviço" -> areaServico += quantidade
             else -> println("Invalido")
         }
     }
@@ -159,6 +163,7 @@ fun main() {
     println("$banheiro resultando em $valorBanheiro")
     println("$piscina resultando em $valorPiscina")
     println("O preço do terreno $valorMetro")
+}
 }
 
 ```
