@@ -139,8 +139,26 @@ fun main() {
     var valorServentes = serventes * 1900.0
     var valorMestreDeObras = mestreDeObras * 3500.0
     
+    var maoDeObra = valorEngenheiro + valorMestreDeObras + valorServentes
+    
     valorFinal = valorBanheiro + valorPiscina + valorAreaServico + valorComSuite + valorSemSuite + valorMetro + valorEngenheiro + valorMestreDeObras + valorServentes
     
-    println("O a obra está avaliada em $valorFinal")
+    println("O a obra sem mão de obra está avaliada em ${valorFinal - maoDeObra}")
+    println("O a obra com mão de obra está avaliada em $valorFinal")
+    println("O preço final é ${valorFinal * 1.25}")
+    println("A empresa receberá ${(valorFinal * 1.25) - valorFinal}")
+    println("O subtotal dos itens:")
+    println("valor mão de obra = $maoDeObra")
+    println("valor engenheiro = $valorEngenheiro")
+    println("valor serventes = $valorServentes")
+    println("valor mestre de obras = $valorMestreDeObras")
+    println("")
+    println("$comSuite resultando em $valorComSuite")
+    println("$semSuite resultando em $valorSemSuite")
+    println("$areaServico resultando em $valorAreaServico")
+    println("$banheiro resultando em $valorBanheiro")
+    println("$piscina resultando em $valorPiscina")
+    println("O preço do terreno $valorMetro")
 }
+
 ```
