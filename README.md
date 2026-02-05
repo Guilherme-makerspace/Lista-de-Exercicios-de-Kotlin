@@ -79,3 +79,68 @@ Calcule o valor total da obra e exiba o relatório.
 - II. Total da obra (Sem mão de obra) 
 - III. Total da obra (Com mão de obra) 
 - IV. O lucro da empresa é de 25% sobre o total da obra, calcule quanto a  empresa receberá ao final e quanto ela deverá destinar ao custo da  obra considerando o desconto da folha de pagamento.
+
+### *Resolução*
+```kotlin
+import kotlin.math.pow
+fun main() {
+    println("Digite o comprimento do terreno em metros")
+    val comprimento = readln().toDouble()
+    println("Digite a largura do terreno em metros")
+    val largura = readln().toDouble()
+    var terreno = comprimento * largura
+    var valorFinal = 0.0
+    
+    var mestreDeObras = 0
+    var contadorServentes = (terreno / 10).toInt()
+    var contadorEngenheiro = (terreno / 100).toInt()
+    
+    var serventes = 0
+    var engenheiro = 0
+    
+    var valorMetro = ((terreno/ 10).toInt()) * 4500.0
+    
+    var comSuite = 0
+    var semSuite = 0
+    var areaServico = 0
+    var piscina = 0
+    var banheiro = 0
+    
+    while(true){
+        println("Escreva as adições dos comodos em minusculo sem acento e escreva *pare* para finalizar")
+        var adicoes = readln()
+        when(adicoes){
+            "Quarto Com Suite" -> comSuite++
+            "Quarto Sem Suite" -> semSuite++
+            "Banheiro" -> banheiro++
+            "Piscina" -> piscina++
+            "Area De Serviço" -> areaServico++
+            "pare" -> break
+            else -> println("Invalido")
+        }
+    }
+    
+    var valorComSuite = comSuite * 17000.0
+    var valorSemSuite = semSuite * 12000.0
+    var valorAreaServico = areaServico * 15000.0
+    var valorPiscina = piscina * 27550.0
+    var valorBanheiro = banheiro * 5000.0
+    
+    
+    if(terreno < 10){
+        println("Contrato insuficiente")
+    } else {
+        engenheiro = contadorEngenheiro * 1
+        serventes = contadorServentes * 2
+        mestreDeObras += 1
+    }
+    
+    var valorEngenheiro = engenheiro * 11000.0
+    var valorServentes = serventes * 1900.0
+    var valorMestreDeObras = mestreDeObras * 3500.0
+    
+    valorFinal = valorBanheiro + valorPiscina + valorAreaServico + valorComSuite + valorSemSuite + valorMetro + valorEngenheiro + valorMestreDeObras + valorServentes
+    
+    println("O a obra está avaliada em $valorFinal")
+}
+```
